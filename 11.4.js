@@ -1,4 +1,10 @@
 
+/* WEEK 6 - TASK 11.4
+   BUILD: Rewrite Callback Hell Using Async/Await
+*/
+
+
+// 1. Get user information
 function getUserData(userId) {
 
     return new Promise((resolve, reject) => {
