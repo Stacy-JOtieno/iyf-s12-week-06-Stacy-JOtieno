@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="weather-app">
+        <h1>Weather Dashboard</h1>
+        <p class="subtitle">Find the current weather in any city.</p>
+
+        <form id="search-form">
+            <input
+                type="text"
+                id="city-input"
+                placeholder="Enter city name..."
+                required
+            >
+            <button type="submit">Search</button>
+        </form>
+
+        <div id="loading" class="hidden">Loading weather...</div>
+        <div id="error" class="hidden error" role="alert"></div>
+
+        <section id="weather-display" class="hidden">
+            <div class="weather-main">
+                <h2 id="city-name"></h2>
+                <img id="weather-icon" src="" alt="Weather icon">
+                <p id="temperature"></p>
+                <p id="description"></p>
+            </div>
+
+            <div class="weather-details">
+                <div class="detail">
+                    <span>Feels Like</span>
+                    <strong id="feels-like"></strong>
+                </div>
+                <div class="detail">
+                    <span>Humidity</span>
+                    <strong id="humidity"></strong>
+                </div>
+                <div class="detail">
+                    <span>Wind</span>
+                    <strong id="wind"></strong>
+                </div>
+                <div class="detail">
+                    <span>Pressure</span>
+                    <strong id="pressure"></strong>
+                </div>
+            </div>
+        </section>
+
+        <section id="recent-searches">
+            <h3>Recent Searches</h3>
+            <ul id="search-history"></ul>
+        </section>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
