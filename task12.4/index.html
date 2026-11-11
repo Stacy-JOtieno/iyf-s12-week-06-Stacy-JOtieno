@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>User Directory</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <main id="app">
+
+        <h1>User Directory</h1>
+
+        <p class="description">
+            Search, sort and filter users.
+        </p>
+
+        <!-- Search input -->
+
+        <div class="controls">
+
+            <div class="form-group">
+
+                <label for="search">Search by name or email</label>
+
+                <input
+                    type="search"
+                    id="search"
+                    placeholder="Search users..."
+                >
+
+            </div>
+
+
+            <!-- Sorting dropdown -->
+
+            <div class="form-group">
+
+                <label for="sort">Sort by name</label>
+
+                <select id="sort">
+
+                    <option value="az">A - Z</option>
+
+                    <option value="za">Z - A</option>
+
+                </select>
+
+            </div>
+
+
+            <!-- City filter -->
+
+            <div class="form-group">
+
+                <label for="city-filter">Filter by city</label>
+
+                <select id="city-filter">
+
+                    <option value="all">All Cities</option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+
+        <!-- Results count -->
+
+        <p id="results-count"></p>
+
+
+        <!-- Loading message -->
+
+        <div id="loading">Loading users...</div>
+
+
+        <!-- Error message -->
+
+        <div id="error" class="hidden"></div>
+
+
+        <!-- User cards -->
+
+        <div id="users-container"></div>
+
+    </main>
+
+</body>
+
+</html>
